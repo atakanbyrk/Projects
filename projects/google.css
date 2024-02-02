@@ -1,0 +1,130 @@
+/* Fake Google */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1#logo {
+    width: 269px;
+    height: 95px;
+    background: url("images/google.png") top left no-repeat;
+    background-size: 100%;
+    text-indent: -9999px; /* Google text disappear off the screen, it is still in the box but not visually seen. */
+    margin: 0 auto;
+}
+
+#container {
+    width: 580px;
+    margin: 100 auto;
+    text-align: center;
+    margin-top: 112px;
+    
+}
+
+input[type="search"] {
+    width: 550px;
+    padding: 13px;
+    margin: 32px 0 18px;
+    border: solid 1px #ccc;
+    font-size: 16px;
+    border-radius: 100px;
+}
+
+input[type="search"]:hover {
+    border-color: #aaa;
+}
+
+input[type="submit"] {
+    background: #f8f9fa;
+    color: #333;
+    border: none;
+    width: 140px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    margin: 15px 5px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+small {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 13px;
+    color: #333;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+nav#header {
+    text-align: right;
+    padding: 20px;
+}
+
+nav#header ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav#header ul li a:link,
+nav#header ul li a:visited
+footer nav ul li a:link,
+footer nav ul li a:visited {
+    color: #333;
+}
+
+nav#header ul li a:hover
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+footer nav {
+    padding: 10px 30px;
+    border-top: solid 1px;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul {
+    float: left;
+}
+
+footer nav ul.right-links {
+    float: right;
+    text-align: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer small#post-footer {
+    padding: 0 40px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}

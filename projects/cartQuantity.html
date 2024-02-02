@@ -1,0 +1,107 @@
+<html>
+
+    <head>
+        <title>Cart &#45; Quantity</title>
+        
+        
+    </head>
+        
+    
+    <body>
+        
+        <!-- var, let, const are for to create variable but use const by default since the other ones are have issues.
+        If we have to change a variable then we use "let" 
+-->
+
+        
+        <!-- cartQuantity +=1; 
+             cartQuantity = cartQuantity + 1;  
+             cartQuantity++;
+-- Shortcuts to reassign a variable to a new value -- -->
+
+        <div id= "cart_info">Cart Quantity: 0</div>
+        
+        <button onclick="
+            updateCartQuantity(1); 
+        ">Add to Cart (+1)</button>
+        
+        <button onclick="
+            updateCartQuantity(2);
+                         ">+2</button>
+        <button onclick="
+            updateCartQuantity(3);
+                         ">+3</button>
+        <button onclick="
+            updateCartQuantity(4);
+                         ">+4</button>
+        <button onclick="
+            updateCartQuantity(5);
+                         ">+5</button>
+        <button onclick="
+            updateCartQuantity(-1);
+                         ">-1</button>
+        <button onclick="
+            updateCartQuantity(-2);
+                         ">-2</button>
+        <button onclick="
+            updateCartQuantity(-3);
+                         ">-3</button>
+        <button onclick="
+            
+            surpriseMe();
+                         ">Surprise me!</button>
+        <button onclick="
+            resetCart();
+                         ">Reset Cart</button>
+            
+        
+        <script>
+            
+            let cartQuantity = 0;
+            const cartInfo = document.getElementById('cart_info');
+            
+            function updateCartQuantity(change) {
+                
+                const newQuantity = cartQuantity + change;
+            
+                if (newQuantity > 30) {
+                        alert('The deck is full. You cannot add anymore!');
+                        return;
+                }
+                    
+                if (newQuantity <0) {
+                        alert('You need to add cards to continue.');
+                        return;
+                }
+                
+                if ( newQuantity > 26 && newQuantity <30) {
+                        alert('The deck is about to get full!');   
+                        
+                }
+                
+                cartQuantity += change;
+                console.log(`Cart Quantity: ${cartQuantity}`);
+                cartInfo.innerHTML =`Cart Quantity: ${cartQuantity}`;
+                        return;  
+            }
+            
+            function showQuantity() {
+                console.log(`Cart Quantity: ${cartQuantity}`);
+            }
+            
+            function surpriseMe() {
+                const randomButton = Math.floor(Math.random() * 9);
+                const buttons = document.querySelectorAll('button');
+                buttons[randomButton].click();
+            }
+            
+            function resetCart() {
+                cartQuantity = 0;
+                console.log(`Deck was reset.\nCart Quantity: ${cartQuantity}`);
+                cartInfo.innerHTML =`Cart Quantity: ${cartQuantity}`;
+            }
+            
+        
+        </script>
+    </body>
+</html>
